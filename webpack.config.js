@@ -1,6 +1,7 @@
+var webpack = require('webpack');
 var getConfig = require('hjs-webpack');
 
-module.exports = getConfig({
+var config = getConfig({
   // entry point for the app
   in: 'src/root.js',
 
@@ -19,8 +20,27 @@ module.exports = getConfig({
 
 
   html: function (context) {
+  	//var version = require("./package.json").version;
 	  return {
-	    'index.html': context.defaultTemplate()
+	    'index.html': context.defaultTemplate({html: '<div id="root"></root><script src="/vendors.js"></script>'})
 	  }
 	}
 });
+
+config.resolve.alias = { jquery:'jquery/dist/jquery.min.js' };
+config.plugins.push(
+  new webpack.ProvidePlugin({
+    jQuery: 'jquery',
+    $: 'jquery',
+    'window.jQuery':'jquery'
+  }),
+  new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
+);
+config.entry = {
+  // Add entries for vendors
+  vendors: ['jquery'],
+  // Reassign previous single entry to main entry
+  main: config.entry
+};
+
+module.exports = config;
