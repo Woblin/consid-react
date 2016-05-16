@@ -1,4 +1,4 @@
-# consid-react
+# Consids React och Flux helg
 
 - Installera git
 - Installera node.js, jag använder 4.4.4 https://nodejs.org/en/
@@ -23,3 +23,7 @@ om allt går bra så skriver du
 npm start
 ```
 Då kan du gå in på [http://localhost:3000](http://localhost:3000) ser du texten där så fungerar allt
+
+###Editor
+Jag gillar att använda [SublimeText3](https://www.sublimetext.com/3) med [Package Control](https://packagecontrol.io/installation) och [Babel syntax](https://github.com/babel/babel-sublime). (Allt går att lägga till genom sublime)
+Men ni får använda den editor ni vill.
