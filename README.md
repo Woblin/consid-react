@@ -5,7 +5,7 @@
 - När du installerat kör dessa kommandon, om du kör windows kan du använda Git Bash, annars terminalen
 
 ````
-sudo npm install npm -g
+sudo npm install npm -g // behövs inte om ni tar version 6 av node
 sudo npm install webpack -g
 ```
 Skapa en ny mapp där du vill lägga dina filer och skriv
