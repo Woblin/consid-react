@@ -7,14 +7,16 @@ import {EventEmitter} from 'events';
 import assign from 'object-assign';
 let CHANGE_EVENT = 'change';
 
+//privat variabel
 let _todos = {};
 
+//private funktioner: create och destroy
 function create(text) {
   // Using the current timestamp in place of a real id.
   var id = Date.now();
   _todos[id] = {
     id: id,
-    complete: false,
+    complete: false,//använder inte i detta exemplet
     text: text
   };
 }
@@ -44,16 +46,16 @@ let ToDoStore = assign({}, EventEmitter.prototype, {
 AppDispatcher.register(function(action) {
 	switch(action.type) {
 		case ToDoConstants.TODO_CREATE: {
-			let text = action.payload.text.trim();
-      if (text !== '') {
-        create(text);
-        ToDoStore.emitChange();
+			let text = action.payload.text.trim();//ta bort whitespace
+      if (text !== '') {//vi lägger bara till texten om den inte är en tom sträng
+        create(text);//Lägger till en todo i listan
+        ToDoStore.emitChange();//Berättar att vi har gjort en förändring
       }
 			break;
 		}
 		case ToDoConstants.TODO_DESTROY: {
-			destroy(action.payload.id);
-			ToDoStore.emitChange();
+			destroy(action.payload.id);//Plockar bort en todo från listan
+			ToDoStore.emitChange();//Berättar att vi har gjort en förändring
 			break;
 		}
 	}
