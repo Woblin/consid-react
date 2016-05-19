@@ -1,8 +1,12 @@
 'use strict'
 
-var React = require('react');
+import React from 'react'
 
 var SubComponent = React.createClass({
+	propTypes: {
+		title: React.PropTypes.string.isRequired,
+		text: React.PropTypes.string.isRequired
+	},
 	getInitialState: function() {
     return {name: 'Consid', age: '15',
     	employees: [
@@ -17,10 +21,10 @@ var SubComponent = React.createClass({
   render: function() {
   	var employees = this.state.employees.map(function(employee){
   		return (
-  			<p key={employee.id}>{employee.name}</p>
+  			<li key={employee.id}>{employee.name}</li>
   		)
   	});
-  	
+
     return (
       <div>
       	<h2>{this.props.title}</h2>
@@ -31,7 +35,9 @@ var SubComponent = React.createClass({
       	</div>
       	<button onClick={this.andraAlder.bind(this, 55)}>Ändra texten</button>
       	<div>
-      		{employees}
+      		<ul>
+	      		{employees}
+	      	</ul>
       	</div>
     	</div>
     );

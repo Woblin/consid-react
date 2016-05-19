@@ -40,7 +40,7 @@ var Home = React.createClass({
   	});
 
     return (
-      <div>
+      <div className="col-md-12">
       	<h1>Employees</h1>
         <hr />
         <div>

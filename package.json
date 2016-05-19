@@ -24,8 +24,11 @@
     }
   },
   "dependencies": {
+    "es6-promise": "^3.2.1",
+    "flux": "^2.1.1",
     "hjs-webpack": "^8.1.0",
     "jquery": "^2.2.3",
+    "object-assign": "^4.1.0",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
     "sizzle": "^2.3.0"

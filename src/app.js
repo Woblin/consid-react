@@ -7,6 +7,7 @@ const ACTIVE = {color: 'red'};
 
 var App = React.createClass({
   render: function() {
+  	let path = this.props.location.pathname;
     return (
       <div>
 				<nav className="navbar navbar-inverse navbar-fixed-top">
@@ -22,14 +23,17 @@ var App = React.createClass({
 		        </div>
 		        <div id="navbar" className="collapse navbar-collapse">
 		          <ul className="nav navbar-nav">
-		            <li><Link to="/" activeStyle={ACTIVE}>Home</Link></li>
-		            <li><Link to="/about" activeClassName="active">About</Link></li>
+		            <li className={(path === '/')?'active':''}><Link to="/" >Home</Link></li>
+		            <li className={(path === '/about')?'active':''}><Link to="/about">About</Link></li>
+		            <li className={(path === '/todo')?'active':''}><Link to="/todo">ToDo</Link></li>
 		          </ul>
 		        </div>
 		      </div>
 		    </nav>
 		    <div className="container" style={{padding: '40px 15px'}}>
-        	{this.props.children}
+		    	<div className="row">
+        		{this.props.children}
+        	</div>
 		    </div>
     	</div>
     );

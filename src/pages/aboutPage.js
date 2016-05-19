@@ -26,7 +26,7 @@ var About = React.createClass({
       );
     });
     return (
-      <div>
+      <div className="col-md-12">
       	<h1>About page</h1>
         <p>
         Jag hämtar väderdata från SMHI för <a href="http://www.smhi.se/#ws=wpt-a,proxy=wpt-a,geonameid=2673730">Stockholm</a>
