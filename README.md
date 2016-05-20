@@ -14,7 +14,7 @@ git clone https://github.com/Woblin/consid-react/
 cd consid-react
 npm install
 ```
-Det tar en stund att ladda ner allt så ha tålamod, men när det är klart skriv följande
+Det tar en stund att ladda ner allt så ha tålamod (ca 67 MB), men när det är klart skriv följande
 ````
 webpack
 ```
