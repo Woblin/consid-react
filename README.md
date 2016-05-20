@@ -2,7 +2,7 @@
 
 - Installera git
 - Installera node.js, jag använder 4.4.4 https://nodejs.org/en/
-- När du installerat kör dessa kommandon, om du kör windows kan du använda Git Bash, annars terminalen
+- När du installerat kör dessa kommandon, om du kör windows kan du använda Git Bash, annars terminalen, ta inte med sudo om ni kör windows
 
 ````
 sudo npm install npm -g // behövs inte om ni tar version 6 av node
