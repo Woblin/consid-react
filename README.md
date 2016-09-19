@@ -1,7 +1,7 @@
 # Consids React och Flux helg
 
 - Installera git
-- Installera node.js, jag använder 4.4.4 https://nodejs.org/en/
+- Installera node.js, jag använder 6.6.0 https://nodejs.org/en/
 - När du installerat kör dessa kommandon, om du kör windows kan du använda Git Bash, annars terminalen, ta inte med sudo om ni kör windows
 
 ````
@@ -14,7 +14,7 @@ git clone https://github.com/Woblin/consid-react/
 cd consid-react
 npm install
 ```
-Det tar en stund att ladda ner allt så ha tålamod (ca 67 MB), men när det är klart skriv följande
+Det tar en stund att ladda ner allt så ha tålamod (ca 110 MB), men när det är klart skriv följande
 ````
 webpack
 ```
