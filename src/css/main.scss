@@ -1,2 +1,18 @@
 @import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import '../../node_modules/weather-icons/css/weather-icons.css';
 
+.weather-container {
+	border: 1px solid black;
+	float: left;
+	margin: 10px;
+	padding: 30px;
+	width: 350px;
+	text-align: center;
+	.weather-icon {
+		font-size: 1000%;
+	}
+	.weather-value {
+		font-weight: bold;
+		font-size: 300%;
+	}
+}
